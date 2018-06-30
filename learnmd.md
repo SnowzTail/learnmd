@@ -283,29 +283,29 @@ Eg. Contents
 定义图片与定义链接的用法相似, 只是以 '!' 开头.
 
 ```
-Eg. Pic
+Eg. Pic (via [Pixiv - Bison倉鼠](https://www.pixiv.net/member.php?id=333556))
 
-    ![蛍の庭](https://i.pximg.net/img-original/img/2015/02/03/00/09/07/48525043_p0.jpg)
+    ![☆](https://snowztail.com/wp-content/uploads/2018/06/68748564_p0.jpg)
 ```
 
-![蛍の庭](https://i.pximg.net/img-original/img/2015/02/03/00/09/07/48525043_p0.jpg)
+![☆](https://snowztail.com/wp-content/uploads/2018/06/68748564_p0.jpg)
 
 也可以通过key调用:
 
 ```
 Eg. Defining the reference
 
-    [pic_1]: https://i.pximg.net/img-original/img/2015/02/03/00/09/07/48525043_p0.jpg
+    [pic_1]: https://snowztail.com/wp-content/uploads/2018/06/68748564_p0.jpg
 ```
 
-[pic_1]: https://i.pximg.net/img-original/img/2015/02/03/00/09/07/48525043_p0.jpg
+[pic_1]: https://snowztail.com/wp-content/uploads/2018/06/68748564_p0.jpg
 
 ```
 Eg. Calling the reference
 
-    ![蛍の庭][pic_1]
+    ![☆][pic_1]
 ```
-![蛍の庭][pic_1]
+![☆][pic_1]
 
 ---
 

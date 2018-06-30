@@ -8,7 +8,16 @@
 
 - [标题](#标题)
 - [引用](#引用)
-- [强调](#强调)
+- [字体](#字体)
+- [分割](#分割)
+- [列表](#列表)
+- [链接](#链接)
+- [图片](#图片)
+- [代码](#代码)
+- [表格](#表格)
+- [HTML](#html)
+- [CSS](#css)
+- [参考](#参考)
 
 ---
 
@@ -66,7 +75,7 @@ Eg. Quotes + Headers
 
 ---
 
-## 强调
+## 字体
 
 ### 斜体
 
@@ -103,9 +112,20 @@ Eg. Bold italic
 
 > 相比使用 '_' 我更喜欢 '*', 因为前者被认为是词的一部分, 与内容同时被选中.
 
+### 删除
+
+在内容前后都加上两个 '~' 表示删除线 (不需要空格).
+
+```
+Eg. Strikethrough
+    ~~Strikethrough~~
+```
+
+~~Strikethrough~~
+
 ---
 
-## 分割线
+## 分割
 
 用连续的三个或更多的 '-', '_' 或者 '*' 添加一条分割线.
 
@@ -147,7 +167,7 @@ Eg. Indenting
 
 - item 
     - subitem
-- 
+- item
 
 ### 有序列表
 
@@ -237,10 +257,23 @@ Eg. # Header -> `<h1 id="header">Header</h1>`
 Eg. 'Header Info' -> header-info
 ``
 
-本文目录索引也是通过锚点实现的.
+本文目录索引是通过锚点实现的.
 
 ```
-Eg. 
+Eg. Contents
+
+    - [标题](#标题)
+    - [引用](#引用)
+    - [字体](#字体)
+    - [分割](#分割)
+    - [列表](#列表)
+    - [链接](#链接)
+    - [图片](#图片)
+    - [代码](#代码)
+    - [表格](#表格)
+    - [HTML](#html)
+    - [CSS](#css)
+    - [参考](#参考)
 ```
 
 ---
@@ -285,7 +318,8 @@ Eg. Calling the reference
 一组反引号表示单个对象.
 
 ```
-Eg. 
+Eg. Object
+
     `Object`
 ```
 
@@ -296,7 +330,8 @@ Eg.
 两组反引号表示单行代码.
 
 ```
-Eg. 
+Eg. Inline code 
+
     ``
     Inline code
     ``
@@ -311,22 +346,120 @@ Inline code
 三组反引号表示代码块.
 
 ```
-Eg. 
+Eg. Code block
+
     ```
-    Code 
+    Code
     block
     ```
 ```
 
 ```
-Code 
+Code
 block
 ```
 
+> 在 ``` 后添加语言名称实现语法高亮.
+
+#### Go
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello World!")
+}
+```
+#### Java
+
+```java
+public class HelloWorld {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+
+}
+```
+
+---
+
+## 表格
+
+列间用 '|' 分隔, 行间用 '-' 分隔. 注意, 要分隔行, 表头和元素间至少需要三个 '-'.
+
+为了增加可读性, 建议将表格列对齐. 下面两个例子的效果相同.
+
+```
+Eg. Not aligned table
+
+    | Header 1 | Header 2 |
+    | ----| ---|
+    |Loooooooooooooong item 1 | looooooooooong item 2 |
 
 
-https://github.com/jamesqquick/markdown-worksheet
+    Aligned table
 
-https://coding.net/help/doc/project/markdown.html
+    | Header 1                | Header 2              |
+    | ----------------------- | --------------------- |
+    |Loooooooooooooong item 1 | looooooooooong item 2 |
+```
 
-https://blog.csdn.net/chenriyang0306/article/details/77259017
+| Header 1                | Header 2              |
+| ----------------------- | --------------------- |
+|Loooooooooooooong item 1 | looooooooooong item 2 |
+
+在单元格中可以控制内容居左 / 中 / 右, 通过在分隔行内添加 ':' 实现:
+
+ - 居左: 默认, 无需添加 ':'
+ - 居中: 在 '-' 分隔块左右各加上一个 ':'
+ - 居右: 在 '-' 分隔块右边加上一个 ':'
+
+```
+Eg. Align scheme
+    | Header | Header 1 | Header 2  |
+    | ------ | :------: | --------: |
+    | Aligned Left | Aligned Center | Aligned Right | 
+```
+
+| Header | Header 1 | Header 2  |
+| ------ | :------: | --------: |
+| Aligned Left | Aligned Center | Aligned Right |
+
+---
+
+## HTML
+
+通过以下格式添加自定义 HTML.
+
+```html 
+<p>Sample HTML Div</p>
+```
+
+<p>Sample HTML Div</p>
+
+---
+
+## CSS
+
+通过以下格式添加自定义 CSS.
+
+```html
+    <style>
+        body {
+            color:red;
+        }
+    </style>
+```
+
+---
+
+## 参考
+
+- [James Q Quick - Markdown Worksheet](https://github.com/jamesqquick/markdown-worksheet)
+
+- [Coding.net - Markdown 语法介绍](https://coding.net/help/doc/project/markdown.html)
+
+- [Hacpai - Markdown 教程](https://blog.csdn.net/chenriyang0306/article/details/77259017)
